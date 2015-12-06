@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('checkout',['as'=>'checkout','uses'=>'PaymentController@index']);
+Route::post('checkout',['as'=>'checkout','uses'=>'PaymentController@create']);
